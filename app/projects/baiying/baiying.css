@@ -1,0 +1,20 @@
+html,body { margin:0; padding:0; background:#f4f5f7; }
+.baiying-project { width:100%; margin:0; padding:0; background:#f4f5f7; }
+.baiying-image-stream { width:100%; margin:0; padding:0; font-size:0; line-height:0; }
+.baiying-image-stream img { display:block; width:100%; height:auto; margin:0; padding:0; border:0; }
+.baiying-back { position:fixed; z-index:50; top:20px; left:20px; display:flex; align-items:center; gap:9px; padding:11px 16px; border:1px solid rgba(255,255,255,.32); border-radius:999px; color:#fff; background:rgba(10,18,28,.68); backdrop-filter:blur(12px); font:400 13px/1 "Mabry Pro",Arial,sans-serif; transition:background .2s ease,color .2s ease; }
+.baiying-back:hover { color:#000; background:#d9ff00; border-color:#d9ff00; }
+.baiying-language { position:fixed; z-index:50; top:20px; right:20px; display:flex; align-items:center; gap:6px; padding:7px 13px; border:1px solid rgba(255,255,255,.32); border-radius:999px; color:#718094; background:rgba(10,18,28,.68); backdrop-filter:blur(12px); font:400 12px/1 "Mabry Pro",Arial,sans-serif; }
+.baiying-language button { padding:4px 1px; border:0; color:#8793a3; background:transparent; cursor:pointer; font:inherit; }
+.baiying-language button.active { color:#fff; }
+.baiying-language button:hover { color:#d9ff00; }
+.baiying-return { min-height:72vh; display:flex; flex-direction:column; justify-content:space-between; padding:34px 28px 24px; color:#f4f4ef; background:#050505; }
+.baiying-return > p { margin:0; color:#777; font:400 11px/1 "Mabry Pro",Arial,sans-serif; }
+.baiying-return-link { display:flex; align-items:center; justify-content:space-between; gap:30px; padding:35px 0; border-top:1px solid #2b2b29; border-bottom:1px solid #2b2b29; transition:color .25s ease; }
+.baiying-return-link > span { display:flex; flex-direction:column; gap:13px; font:400 clamp(52px,10vw,170px)/.86 "FK Display",Arial,sans-serif; }
+.baiying-return-link small { color:#777; font:400 15px/1 "Mabry Pro",Arial,sans-serif; }
+.baiying-return-link i { flex:0 0 auto; display:grid; place-items:center; width:clamp(72px,9vw,140px); height:clamp(72px,9vw,140px); border:1px solid #555; border-radius:50%; font:normal 400 clamp(30px,4vw,62px)/1 "Mabry Pro",Arial,sans-serif; transition:transform .3s ease,background .25s ease,color .25s ease,border-color .25s ease; }
+.baiying-return-link:hover { color:#d9ff00; }
+.baiying-return-link:hover i { color:#000; background:#d9ff00; border-color:#d9ff00; transform:rotate(45deg); }
+.baiying-return-meta { display:flex; justify-content:space-between; color:#777; font:400 11px/1 "Mabry Pro",Arial,sans-serif; }
+@media(max-width:760px){.baiying-back{top:12px;left:12px;padding:10px 13px;font-size:12px}.baiying-language{top:12px;right:12px}.baiying-return{min-height:58vh;padding:24px 15px 18px}.baiying-return-link{padding:28px 0}.baiying-return-link>span{font-size:14vw;line-height:.9}.baiying-return-link small{font-size:12px}.baiying-return-link i{width:58px;height:58px;font-size:26px}.baiying-return-meta{font-size:9px}}
