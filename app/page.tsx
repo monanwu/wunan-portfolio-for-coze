@@ -77,13 +77,13 @@ export default function Home() {
   useEffect(() => {
     if ("scrollRestoration" in window.history) window.history.scrollRestoration = "manual";
 
+    // Always scroll to top on initial load and clear any hash that would cause auto-scrolling
     const hash = window.location.hash;
-    if (!hash || hash === "#" || hash === "#top" || hash === "#project-index") {
-      if (hash === "#project-index") {
-        window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
-      }
-      window.requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: "auto" }));
+    if (hash && hash !== "#" && hash !== "#top") {
+      // Clear hash from URL to prevent browser auto-scrolling to anchored elements
+      window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
     }
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
 
     return () => {
       if ("scrollRestoration" in window.history) window.history.scrollRestoration = "auto";
