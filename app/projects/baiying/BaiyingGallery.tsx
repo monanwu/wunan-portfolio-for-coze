@@ -51,7 +51,7 @@ export default function BaiyingGallery() {
 
   return (
     <main className="baiying-project">
-      <a className="baiying-back" href="/#work" aria-label={zh ? "返回作品集" : "Back to selected work"}>
+      <a className="baiying-back" href="/" aria-label={zh ? "返回作品集" : "Back to selected work"}>
         <span>←</span> {zh ? "返回" : "Back"}
       </a>
       <div className="baiying-language" aria-label="Language selector">
@@ -77,7 +77,7 @@ export default function BaiyingGallery() {
 
       <section className="baiying-return" aria-labelledby="baiying-return-title">
         <p>{zh ? "项目结束" : "END OF PROJECT"} · {projectOrder.baiying.position}</p>
-        <a href="/#work" className="baiying-return-link">
+        <a href="/" className="baiying-return-link">
           <span id="baiying-return-title">
             {zh ? "返回作品集" : "Back to portfolio"}
             <small>{zh ? "Back to portfolio" : "返回作品集"}</small>

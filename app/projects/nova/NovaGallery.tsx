@@ -37,7 +37,7 @@ export default function NovaGallery() {
 
   return (
     <main className="nova-project">
-      <a className="nova-back" href="/#work" aria-label={zh ? "返回作品集" : "Back to selected work"}>
+      <a className="nova-back" href="/" aria-label={zh ? "返回作品集" : "Back to selected work"}>
         <span>←</span> {zh ? "返回" : "Back"}
       </a>
       <div className="nova-language" aria-label="Language selector">
@@ -81,7 +81,7 @@ export default function NovaGallery() {
       </div>
       <section className="nova-return" aria-labelledby="nova-return-title">
         <p>{zh ? "项目结束" : "END OF PROJECT"} · {projectOrder.nova.position}</p>
-        <a href="/#work" className="nova-return-link">
+        <a href="/" className="nova-return-link">
           <span id="nova-return-title">
             {zh ? "返回作品集" : "Back to portfolio"}
             <small>{zh ? "Back to portfolio" : "返回作品集"}</small>

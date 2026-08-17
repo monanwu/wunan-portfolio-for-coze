@@ -75,7 +75,7 @@ export default function IllustrationGalleryPage() {
   return (
     <main className="gallery-page">
       <header className="gallery-header">
-        <a className="gallery-mark" href="/#work">W</a>
+        <a className="gallery-mark" href="/">W</a>
         <a className="gallery-back" href="/projects/illustration"><i>←</i><span>{zh ? "返回插图" : "Back to illustration"}</span></a>
         <div className="gallery-language" aria-label="Language selector">
           <button className={zh ? "active" : ""} onClick={() => switchLanguage("zh")}>中</button><span>/</span>

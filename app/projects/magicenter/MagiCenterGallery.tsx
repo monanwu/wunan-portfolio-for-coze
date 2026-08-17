@@ -65,7 +65,7 @@ export default function MagiCenterGallery() {
 
   return (
     <main className="magicenter-project">
-      <a className="magicenter-back" href="/#work" aria-label={zh ? "返回作品集" : "Back to selected work"}>
+      <a className="magicenter-back" href="/" aria-label={zh ? "返回作品集" : "Back to selected work"}>
         <span>←</span> {zh ? "返回" : "Back"}
       </a>
       <div className="magicenter-language" aria-label="Language selector">
@@ -91,7 +91,7 @@ export default function MagiCenterGallery() {
 
       <section className="magicenter-return" aria-labelledby="magicenter-return-title">
         <p>{zh ? "项目结束" : "END OF PROJECT"} · {projectOrder.magicenter.position}</p>
-        <a href="/#work" className="magicenter-return-link">
+        <a href="/" className="magicenter-return-link">
           <span id="magicenter-return-title">
             {zh ? "返回作品集" : "Back to portfolio"}
             <small>{zh ? "Back to portfolio" : "返回作品集"}</small>

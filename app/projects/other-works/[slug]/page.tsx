@@ -127,7 +127,7 @@ export default function OtherWorksGalleryPage() {
   return (
     <main className="gallery-page">
       <header className="gallery-header">
-        <a className="gallery-mark" href="/#work">W</a>
+        <a className="gallery-mark" href="/">W</a>
         <a className="gallery-back" href="/projects/other-works"><i>←</i><span>{zh ? "返回其他作品" : "Back to other works"}</span></a>
         <div className="gallery-language">
           <button className={zh ? "active" : ""} onClick={() => switchLanguage("zh")}>中</button><span>/</span>

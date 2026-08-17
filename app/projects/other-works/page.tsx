@@ -39,8 +39,8 @@ export default function OtherWorksPage() {
   return (
     <main className="other-works-page">
       <header className="ow-header">
-        <a className="ow-mark" href="/#work" aria-label={zh ? "返回作品集" : "Back to portfolio"}>W</a>
-        <a className="ow-back" href="/#work"><i>←</i><span>{zh ? "返回作品集" : "Back to portfolio"}</span></a>
+        <a className="ow-mark" href="/" aria-label={zh ? "返回作品集" : "Back to portfolio"}>W</a>
+        <a className="ow-back" href="/"><i>←</i><span>{zh ? "返回作品集" : "Back to portfolio"}</span></a>
         <div className="ow-language" aria-label="Language selector">
           <button className={zh ? "active" : ""} onClick={() => setLang("zh")}>中</button><span>/</span>
           <button className={!zh ? "active" : ""} onClick={() => setLang("en")}>EN</button>

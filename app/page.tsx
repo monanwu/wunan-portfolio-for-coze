@@ -77,16 +77,48 @@ export default function Home() {
   useEffect(() => {
     if ("scrollRestoration" in window.history) window.history.scrollRestoration = "manual";
 
-    // Always scroll to top on initial load and clear any hash that would cause auto-scrolling
+    // Clear any hash from URL to prevent browser auto-scrolling
     const hash = window.location.hash;
     if (hash && hash !== "#" && hash !== "#top") {
-      // Clear hash from URL to prevent browser auto-scrolling to anchored elements
       window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
     }
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+
+    // Check for saved scroll position (returning from detail page)
+    const savedPosition = sessionStorage.getItem("homepage-scroll-position");
+    if (savedPosition) {
+      const position = parseInt(savedPosition, 10);
+      sessionStorage.removeItem("homepage-scroll-position");
+      // Restore scroll position after a short delay to ensure page is rendered
+      setTimeout(() => {
+        window.scrollTo({ top: position, left: 0, behavior: "auto" });
+      }, 50);
+    } else {
+      // Fresh visit or refresh - scroll to top
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }
+
+    // Save scroll position before navigating away
+    const saveScrollPosition = () => {
+      sessionStorage.setItem("homepage-scroll-position", String(window.scrollY));
+    };
+
+    // Save position when clicking links that navigate to project pages
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const anchor = target.closest("a");
+      if (anchor && anchor.href && (anchor.href.includes("/projects/") || anchor.href.includes("/#/"))) {
+        saveScrollPosition();
+      }
+    };
+
+    // Also save on beforeunload as a fallback
+    window.addEventListener("beforeunload", saveScrollPosition);
+    document.addEventListener("click", handleClick);
 
     return () => {
       if ("scrollRestoration" in window.history) window.history.scrollRestoration = "auto";
+      window.removeEventListener("beforeunload", saveScrollPosition);
+      document.removeEventListener("click", handleClick);
     };
   }, []);
 
