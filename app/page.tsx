@@ -254,7 +254,7 @@ export default function Home() {
           <div className="about-glow about-glow-lime" aria-hidden="true" />
           <div className="about-glow about-glow-cyan" aria-hidden="true" />
           <figure className="about-photo-card">
-            <img src="/about/wunan-portrait.png" alt={zh ? "吴楠个人照片" : "Portrait of Wunan"} loading="lazy" draggable="false" />
+            <img src="/about/wunan-portrait.webp" alt={zh ? "吴楠个人照片" : "Portrait of Wunan"} loading="lazy" draggable="false" />
           </figure>
           <div className="about-float about-float-dots" aria-hidden="true"><i /><i /><i /></div>
           <div className="about-float about-float-focus">
