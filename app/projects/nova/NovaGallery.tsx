@@ -49,21 +49,25 @@ export default function NovaGallery() {
         {images.map((image, index) => (
           image === "09-process.jpg.webp" ? (
             <section className="nova-motion-showcase" aria-label="Nova character motion studies" key={`${lang}-${image}`}>
-              {["09-01", "09-02", "09-03"].map((video, videoIndex) => (
-                <video
-                  className={`nova-motion nova-motion-${videoIndex + 1}`}
-                  key={`${lang}-${video}`}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  poster={`/projects/video-posters/nova/${video}.jpg`}
-                  aria-label={`Nova motion study ${videoIndex + 1}`}
-                >
-                  <source src={`/projects/nova/${video}-web.mp4`} type="video/mp4" />
-                </video>
-              ))}
+              {["09-01", "09-02", "09-03"].map((video, videoIndex) => {
+                  // 09-01 和 09-02 没有 -web 后缀，09-03 有 -web 后缀
+                  const videoSrc = video === "09-03" ? `${video}-web.mp4` : `${video}.mp4`;
+                  return (
+                    <video
+                      className={`nova-motion nova-motion-${videoIndex + 1}`}
+                      key={`${lang}-${video}`}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      poster={`/projects/video-posters/nova/${video}.jpg`}
+                      aria-label={`Nova motion study ${videoIndex + 1}`}
+                    >
+                      <source src={`/projects/nova/${videoSrc}`} type="video/mp4" />
+                    </video>
+                  );
+                })}
             </section>
           ) : (
             <img
