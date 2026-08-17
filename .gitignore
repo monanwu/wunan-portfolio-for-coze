@@ -50,3 +50,5 @@ next-env.d.ts
 
 # Preview files
 .preview
+.cozeproj/reduction
+.codegraph
