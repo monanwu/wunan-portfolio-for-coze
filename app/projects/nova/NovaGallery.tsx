@@ -5,18 +5,18 @@ import { projectOrder } from "../../project-order";
 import { toWebpFilename } from "../../project-image";
 
 const images = [
-  "01-cover.jpg.png",
-  "02-overview.jpg.png",
-  "03-process.jpg.png",
-  "04-process.jpg.png",
-  "05-process.jpg.png",
-  "06-process.jpg.png",
-  "07-process.jpg.png",
-  "08-process.jpg.png",
-  "09-process.jpg.png",
-  "10-process.jpg.png",
-  "11-process.jpg.png",
-  "12-final.jpg.png",
+  "01-cover.jpg.webp",
+  "02-overview.jpg.webp",
+  "03-process.jpg.webp",
+  "04-process.jpg.webp",
+  "05-process.jpg.webp",
+  "06-process.jpg.webp",
+  "07-process.jpg.webp",
+  "08-process.jpg.webp",
+  "09-process.jpg.webp",
+  "10-process.jpg.webp",
+  "11-process.jpg.webp",
+  "12-final.jpg.webp",
 ];
 
 export default function NovaGallery() {
@@ -47,7 +47,7 @@ export default function NovaGallery() {
       </div>
       <div className="nova-image-stream">
         {images.map((image, index) => (
-          image === "09-process.jpg.png" ? (
+          image === "09-process.jpg.webp" ? (
             <section className="nova-motion-showcase" aria-label="Nova character motion studies" key={`${lang}-${image}`}>
               {["09-01", "09-02", "09-03"].map((video, videoIndex) => (
                 <video

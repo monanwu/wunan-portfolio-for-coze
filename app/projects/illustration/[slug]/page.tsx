@@ -14,7 +14,7 @@ const galleries = {
     descriptionEn: "A selection of hand-drawn illustrations and editorial visual work.",
     images: Array.from(
       { length: 12 },
-      (_, index) => `/projects/illustration/hand-drawn/${index + 1}.png`,
+      (_, index) => `/projects/illustration/hand-drawn/${index + 1}.webp`,
     ),
   },
   aigc: {
@@ -25,7 +25,7 @@ const galleries = {
     descriptionEn: "Explorations of generative AI across illustration and visual creation.",
     images: [
       "/projects/illustration/aigc/1.jpg",
-      "/projects/illustration/aigc/2.png",
+      "/projects/illustration/aigc/2.webp",
       "/projects/illustration/aigc/3-web.mp4",
       "aigc-motion-grid",
     ],
