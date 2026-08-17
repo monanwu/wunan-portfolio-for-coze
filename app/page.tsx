@@ -285,7 +285,7 @@ export default function Home() {
       <footer id="contact">
         <div className="footer-heading-row">
           <div className="footer-title">{zh ? "点击按钮查看简历" : "Click the button to view my résumé"}</div>
-          <a className="resume-button" href="/wunan-resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a className="resume-button" href="/吴楠简历2026.pdf" target="_blank" rel="noopener noreferrer">
             <span>{zh ? "查看简历" : "View résumé"}</span>
             <i>↗</i>
           </a>
