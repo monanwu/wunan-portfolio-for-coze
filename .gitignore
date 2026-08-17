@@ -47,3 +47,6 @@ next-env.d.ts
 /node_modules/
 /.next/
 .git-backup/
+
+# Preview files
+.preview
